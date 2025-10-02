@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sana Sultana — Portfolio</title>
+  <meta name="description" content="Personal portfolio — projects, skills and contact." />
+  <style>
+    :root{--bg:#ffffff;--card:#f8fafc;--muted:#6b7280;--accent:#4f46e5;--text:#0f172a}
+    .dark{--bg:#0b1220;--card:#071122;--muted:#94a3b8;--accent:#7c3aed;--text:#e6eef8}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:12px;display:inline-grid;place-items:center;background:linear-gradient(135deg,#4f46e5,#ec4899);color:white;font-weight:700}
+    nav a{margin-left:12px;text-decoration:none;color:var(--muted);font-size:15px}
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;margin-top:28px}
+    .title{font-size:40px;line-height:1.02;margin:0}
+    .lead{color:var(--muted);margin-top:10px}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-outline{border:1px solid rgba(15,23,42,0.08);color:var(--text)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:22px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+    .muted{color:var(--muted);font-size:14px}
+    h2{margin:0 0 8px 0}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;border:1px solid rgba(15,23,42,0.06)}
+    footer{margin-top:40px;color:var(--muted);font-size:14px;text-align:center}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    input[type="text"],input[type="email"],textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(2,6,23,0.06);background:transparent;color:var(--text)}
+    form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (min-width:800px){.hero{grid-template-columns:1fr 420px}}
+    @media (max-width:600px){header{flex-direction:column;align-items:flex-start}nav{margin-top:10px}form .row{grid-template-columns:1fr}}
+    .dark-toggle{cursor:pointer;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06)}
+    /* subtle utilities */
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="container" id="page">
+    <header>
+      <div class="brand">
+        <div class="avatar">SS</div>
+        <div>
+          <div style="font-weight:700">Sana Sultana</div>
+          <div class="small muted">Software Engineer •Data Analyst</div>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="dark-toggle" id="themeBtn" aria-label="Toggle theme">Toggle</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1 class="title">Hi — I’m Sana. I build useful web apps.</h1>
+          <p class="lead">I combine clean UI with reliable backend systems. Currently focused on real-time dashboards, AI-driven e-commerce tools, and developer tooling.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-outline" href="mailto:youremail@example.com" style="margin-left:10px">Get in touch</a>
+          </div>
+
+          <section id="about" style="margin-top:22px">
+            <div class="card">
+              <h2>About me</h2>
+              <p class="muted">I’m a software engineer with a passion for building reliable and delightful user experiences. I enjoy taking ideas from mockups to production — focusing on maintainability, testing, and performance.</p>
+              <div style="display:flex;gap:12px;margin-top:12px">
+                <div style="min-width:120px"><strong>Experience</strong><div class="muted">3+ years</div></div>
+                <div style="min-width:120px"><strong>Education</strong><div class="muted">BSc Computer Science</div></div>
+                <div style="min-width:120px"><strong>Open Source</strong><div class="muted">Contributor</div></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3 class="small">Featured Project</h3>
+            <h2 style="margin-top:6px">E‑Commerce Comparison</h2>
+            <p class="muted small">Find the best deal across stores with one search. Demo includes price scraping, normalization and ranking.</p>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+              <div class="small muted">React • Node • AI</div>
+              <a class="small" href="#projects">View</a>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h3 class="small">Contact</h3>
+            <div class="muted">Email: <a href="mailto:youremail@example.com">youremail@example.com</a></div>
+            <div style="margin-top:8px"><a href="https://github.com/yourusername" class="small">GitHub</a> · <a href="https://linkedin.com/in/yourusername" class="small">LinkedIn</a></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects" style="margin-top:30px">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>E‑Commerce Comparison App</h3>
+            <p class="muted small">A web app comparing products across stores with AI recommendations.</p>
+            <div class="tags">
+              <span class="tag">React</span>
+              <span class="tag">Node</span>
+              <span class="tag">AI</span>
+            </div>
+            <div style="margin-top:12px"><a href="#" class="small">Live</a> · <a href="#" class="small">Source</a></div>
+          </article>
+
+          <article class="card">
+            <h3>Real-Time Dashboard</h3>
+            <p class="muted small">Live bank dashboard showing transactions and alerts.</p>
+            <div class="tags"><span class="tag">WebSockets</span><span class="tag">D3</span></div>
+            <div style="margin-top:12px"><a href="#" class="small">Live</a> · <a href="#" class="small">Source</a></div>
+          </article>
+
+          <article class="card">
+            <h3>Sentiment Analyzer</h3>
+            <p class="muted small">Real-time sentiment analysis for social media streams.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">NLP</span></div>
+            <div style="margin-top:12px"><a href="#" class="small">Live</a> · <a href="#" class="small">Source</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section style="margin-top:30px">
+        <h2>Skills</h2>
+        <div class="card" style="margin-top:12px">
+          <div class="skills">
+            <div class="tag">JavaScript</div>
+            <div class="tag">React</div>
+            <div class="tag">Node</div>
+            <div class="tag">Python</div>
+            <div class="tag">Tailwind</div>
+            <div class="tag">Docker</div>
+            <div class="tag">SQL</div>
+            <div class="tag">Testing</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:30px">
+        <h2>Contact</h2>
+        <form class="card" onsubmit="event.preventDefault();alert('Message sent (demo)')" style="margin-top:12px">
+          <div class="row">
+            <input type="text" placeholder="Your name" required />
+            <input type="email" placeholder="Your email" required />
+          </div>
+          <div style="margin-top:12px">
+            <textarea rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div style="margin-top:12px;text-align:right">
+            <button class="btn btn-primary" type="submit">Send</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="muted">© <span id="yr"></span> Sana Sultana — Built with HTML & CSS</div>
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      // set year
+      document.getElementById('yr').textContent = new Date().getFullYear();
+      // theme toggle
+      const btn = document.getElementById('themeBtn');
+      const page = document.getElementById('page');
+      const darkClass = 'dark';
+      const ls = localStorage.getItem('pref-theme');
+      if(ls === 'dark') document.documentElement.classList.add(darkClass);
+      btn.addEventListener('click', ()=>{
+        const isDark = document.documentElement.classList.toggle(darkClass);
+        localStorage.setItem('pref-theme', isDark ? 'dark' : 'light');
+      });
+    })();
+  </script>
+</body>
+</html>
